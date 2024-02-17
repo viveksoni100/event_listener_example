@@ -1,1 +1,1 @@
-kindly visit my blog for in details insights: https://whywhytechnova.com/blogs/configuring-an-event-listeners-in-java-applications.html
+kindly visit my blog for in detail insights: https://whywhytechnova.com/blogs/configuring-an-event-listeners-in-java-applications.html
