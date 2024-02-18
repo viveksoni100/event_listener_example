@@ -2,11 +2,13 @@ package com.example.eventlistenerdemo.event;
 
 import com.example.eventlistenerdemo.service.OrderService;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.context.ApplicationEvent;
 
+/**
+ * @author viveksoni
+ */
+
 @Getter
-@Setter
 public class OrderPlacedEvent extends ApplicationEvent {
 
     private static final long serialVersionUID = 1L;
