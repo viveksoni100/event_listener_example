@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +12,19 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
+            <div th:if="${orderplaced}" class="alert alert-success" role="alert">
+                <span>order placed successfully</span>
+            </div>
             <div class="card">
                 <div class="card-header bg-primary text-white">
                     <h4>Ice Cream Order Form</h4>
                 </div>
                 <div class="card-body">
-                    <form id="iceCreamForm" post="placeorder">
+
+                    <form id="iceCreamForm" method="post" action="/placeorder">
                         <div class="form-group">
                             <label for="iceCreamFlavor">Select Ice Cream Flavor:</label>
-                            <select class="form-control" id="iceCreamFlavor" name="iceCreamFlavor">
+                            <select class="form-control" id="iceCreamFlavor" name="iceCreamFlavor" default="select">
                                 <option value="vanilla">Vanilla</option>
                                 <option value="americanNuts">American Nuts</option>
                                 <option value="afghanDryfruit">Afghan Dryfruit</option>

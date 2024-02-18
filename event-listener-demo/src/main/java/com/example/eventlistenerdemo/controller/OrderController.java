@@ -1,15 +1,25 @@
 package com.example.eventlistenerdemo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class OrderController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public ModelAndView iceCreamOrderForm() {
-        return new ModelAndView("order-page");
+        ModelAndView model = new ModelAndView("order-page");
+        model.addObject("orderplaced", Boolean.FALSE);
+        return model;
+    }
+
+    @PostMapping("/placeorder")
+    public ModelAndView placeAnOrder() {
+        ModelAndView model = new ModelAndView("order-page");
+        model.addObject("orderplaced", Boolean.TRUE);
+        return model;
     }
 
 }
